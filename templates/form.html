@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <style>
+        legend{
+            text-align: center;
+            font-weight: bold;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<a href="{% url 'about' %}" class="btn btn-outline-primary">About</a>
+<a href="{% url 'home' %}" class="btn btn-outline-primary">Home</a>
+
+<form action="" class="bg-info m-5 p-5">
+    <legend>PATIENT RECORDS</legend>
+  <center><img src="{% static 'images/register.png' %}" alt=""></center>     
+    
+ <div class="form-floating mt-3 mb-3">
+     <input type="text" placeholder="Enter firstname" class="form-control" id="fname" required="required">
+     <label for="fname">Firstname</label>
+ </div>
+    
+    <div class="form-floating mt-3 mb-3">  
+     <input type="text" placeholder="Enter lastname" class="form-control" id="lname" required="required">
+     <label for="lname">Lastname</label>
+ </div>
+    
+    <div class="form-floating mt-3 mb-3">
+     <input type="email" placeholder="Enter email" class="form-control" id="email" required="required">
+     <label for="email">Email Address</label>
+ </div>
+    
+<div class="form-floating mt-3 mb-3">
+     <input type="password" placeholder="Enter password" class="form-control" id="pwd" required="required">
+     <label for="pwd">Password</label>
+ </div> 
+    
+<div class="d-grid " >
+    <button class="btn btn-outline-primary">Create Account</button>
+</div>    
+    
+</form>
+
+
+</body>
+</html>
